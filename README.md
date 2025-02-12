@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🔐 Encryption & Decryption App (ASE Project)
 
-## Getting Started
+This is a **Next.js 15** single-page application that allows users to **encrypt and decrypt text** using different cipher algorithms. The project follows **Object-Oriented Programming (OOP) principles** and implements the **Strategy Pattern** for flexible encryption selection.
 
-First, run the development server:
+---
+
+## 📜 Features
+
+✅ Select an encryption algorithm.  
+✅ Enter a string and encrypt it.  
+✅ Enter an encrypted string and decrypt it back.  
+✅ Supports multiple cipher algorithms.  
+✅ Built using **ShadCN UI** for a clean UI.  
+✅ Follows the **Strategy Pattern** for algorithm selection.
+
+---
+
+## 🛠 Technologies Used
+
+- **Next.js 15** (React Framework)
+- **TypeScript** (Static Typing)
+- **ShadCN UI** (UI Components)
+- **OOP Principles** (Encapsulation, Polymorphism)
+- **Strategy Pattern** (For flexible encryption selection)
+
+---
+
+## 🔑 Supported Encryption Algorithms
+
+The app supports the following encryption techniques:
+
+1️⃣ **Caesar Cipher** – Shifts letters forward in the alphabet.  
+2️⃣ **ROT13 Cipher** – A special case of Caesar Cipher with a fixed shift of 13.  
+3️⃣ **Atbash Cipher** – Reverses the alphabet (A ↔ Z, B ↔ Y).  
+4️⃣ **Base64 Encoding** – Encodes text into Base64 format.
+
+---
+
+## 🎯 Software Design Approach: Strategy Pattern
+
+This project implements the **Strategy Pattern**, which allows dynamic selection of encryption algorithms.
+
+### 📌 Why Strategy Pattern?
+
+- Each cipher follows a similar structure (`encrypt` and `decrypt` methods).
+- Users can switch between algorithms dynamically.
+- The main encryption logic is **decoupled** from the UI.
+
+### 📁 Class Structure (OOP Approach)
+
+- `CipherContext` → Manages encryption/decryption using a selected algorithm.
+- `CipherStrategy` → Interface defining `encrypt` and `decrypt` methods.
+- `CaesarCipher`, `ROT13Cipher`, `AtbashCipher`, `Base64Cipher` → Implement the `CipherStrategy` interface.
+
+---
+
+## 📌 UML Diagrams
+
+### 1️⃣ Class Diagram
+
+> _Illustrates the structure of encryption classes and relationships._  
+> _project root/uml_diagrams/class._
+
+### 2️⃣ Sequence Diagram
+
+> _Shows the flow of encryption & decryption in the app._  
+> _project root/uml_diagrams/sequence._
+
+---
+
+## 🚀 How to Run the Project
+
+1️⃣ Clone the repository:
+
+```bash
+git clone https://github.com/your-username/encryption-app.git
+cd encryption-app
+```
+
+2️⃣ Install dependencies:
+
+```bash
+npm install
+```
+
+3️⃣ Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4️⃣ Open the app in your browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+http://localhost:3000
+```
