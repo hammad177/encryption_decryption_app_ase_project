@@ -73,7 +73,7 @@ This project implements the **Strategy Pattern**, which allows dynamic selection
 1️⃣ Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/encryption-app.git
+git clone https://github.com/hammad177/encryption_decryption_app_ase_project.git
 cd encryption-app
 ```
 
